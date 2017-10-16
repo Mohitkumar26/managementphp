@@ -22,6 +22,7 @@ else{
 	 header('Location: http://localhost/login.php');
 }
 	$id=$_GET["id"];
+
 if (isset($id)) {
   $sql = "SELECT * FROM student WHERE id='$id'";
    $result = $conn->query($sql);
@@ -32,6 +33,7 @@ if (isset($id)) {
 
 ?>
 	<form id="form1" method = "post" action="update.php">
+		<!-- huhu -->
 		<input type="hidden" name="id" value="<?php echo $row['id']?>" >
 		Name <br/><input type="text" name="name" id="name" value="<?php echo $row['name']?>">
 		email <br/><input type="text" name="email" id="email" value="<?php echo $row['email']?>">
